@@ -36,3 +36,9 @@ class UltrasonicNode(Node):
 			msg = PositionReading()
 			msg.cart_position = dist
 			self.publisher_.publish(msg)
+def main():
+        rclpy.init()
+        node = UltrasonicNode()
+        rclpy.spin(node)
+        node.destroy_node()
+        rclpy.shutdown()

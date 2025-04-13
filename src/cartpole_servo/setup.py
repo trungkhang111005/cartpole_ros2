@@ -19,7 +19,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'servo_driver_node = cartpole_servo.servo_driver_node:main'
+            'servo_node = cartpole_servo.servo_node:main'
         ],
     },
 )

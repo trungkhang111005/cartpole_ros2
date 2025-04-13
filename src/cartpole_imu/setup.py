@@ -1,4 +1,6 @@
 from setuptools import setup
+import os
+from glob import glob
 
 package_name = 'cartpole_imu'
 
@@ -9,17 +11,18 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name), glob('launch/*.py')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='kai',
     maintainer_email='your_email@example.com',
-    description='ROS2 Node: imu_sensor_node',
+    description='ROS2 Node: imu_node',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'imu_sensor_node = cartpole_imu.imu_sensor_node:main'
+            'imu_node = cartpole_imu.imu_node:main'
         ],
     },
 )

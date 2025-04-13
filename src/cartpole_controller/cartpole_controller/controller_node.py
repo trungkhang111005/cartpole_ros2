@@ -38,3 +38,9 @@ class ControllerNode(Node):
 		msg = TorqueCommand()
 		msg.torque = float(torque)
 		self.pub_cmd.publish(msg)
+def main():
+        rclpy.init()
+        node = ControllerNode()
+        rclpy.spin(node)
+        node.destroy_node()
+        rclpy.shutdown()
