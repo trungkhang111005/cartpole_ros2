@@ -1,0 +1,4 @@
+source;share/cartpole_interfaces/local_setup.bash
+source;share/cartpole_interfaces/local_setup.dsv
+source;share/cartpole_interfaces/local_setup.sh
+source;share/cartpole_interfaces/local_setup.zsh

@@ -1,0 +1,6 @@
+msg/ImuReading.idl
+msg/ImuReading.msg
+msg/PositionReading.idl
+msg/PositionReading.msg
+msg/TorqueCommand.idl
+msg/TorqueCommand.msg

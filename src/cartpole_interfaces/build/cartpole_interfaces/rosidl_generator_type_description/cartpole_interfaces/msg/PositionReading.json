@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "cartpole_interfaces/msg/PositionReading",
+      "fields": [
+        {
+          "name": "x_cart_m",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "cartpole_interfaces/msg/PositionReading",
+      "hash_string": "RIHS01_21a1c4fce2dd5fa9eeec6847e3c12e0c7d1fdaa1cdf8e312d9310cef7f670119"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "package_name": "cartpole_interfaces",
+  "output_dir": "/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_generator_cpp/cartpole_interfaces",
+  "template_dir": "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource",
+  "idl_tuples": [
+    "/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_adapter/cartpole_interfaces:msg/ImuReading.idl",
+    "/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_adapter/cartpole_interfaces:msg/PositionReading.idl",
+    "/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_adapter/cartpole_interfaces:msg/TorqueCommand.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/python3.12/site-packages/rosidl_generator_cpp/__init__.py",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/action__builder.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/action__struct.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/action__traits.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/action__type_support.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/idl.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/idl__builder.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/idl__struct.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/idl__traits.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/idl__type_support.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/msg__builder.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/msg__struct.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/msg__traits.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/msg__type_support.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/srv__builder.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/srv__type_support.hpp.em",
+    "/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_adapter/cartpole_interfaces/msg/ImuReading.idl",
+    "/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_adapter/cartpole_interfaces/msg/PositionReading.idl",
+    "/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_adapter/cartpole_interfaces/msg/TorqueCommand.idl"
+  ],
+  "type_description_tuples": [
+    "msg/ImuReading.idl:/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_generator_type_description/cartpole_interfaces/msg/ImuReading.json",
+    "msg/PositionReading.idl:/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_generator_type_description/cartpole_interfaces/msg/PositionReading.json",
+    "msg/TorqueCommand.idl:/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_generator_type_description/cartpole_interfaces/msg/TorqueCommand.json"
+  ]
+}

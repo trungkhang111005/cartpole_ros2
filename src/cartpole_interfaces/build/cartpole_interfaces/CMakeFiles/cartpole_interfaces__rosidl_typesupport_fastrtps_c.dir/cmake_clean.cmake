@@ -1,0 +1,21 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/imu_reading__type_support_c.cpp.o"
+  "CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/imu_reading__type_support_c.cpp.o.d"
+  "CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/position_reading__type_support_c.cpp.o"
+  "CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/position_reading__type_support_c.cpp.o.d"
+  "CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/torque_command__type_support_c.cpp.o"
+  "CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/torque_command__type_support_c.cpp.o.d"
+  "libcartpole_interfaces__rosidl_typesupport_fastrtps_c.pdb"
+  "libcartpole_interfaces__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/imu_reading__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/imu_reading__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/position_reading__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/position_reading__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/torque_command__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/torque_command__type_support_c.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

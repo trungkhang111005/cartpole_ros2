@@ -1,0 +1,9 @@
+{
+  "package_name": "cartpole_interfaces",
+  "output_dir": "/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_generator_type_description/cartpole_interfaces",
+  "idl_tuples": [
+    "/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_adapter/cartpole_interfaces:msg/ImuReading.idl",
+    "/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_adapter/cartpole_interfaces:msg/PositionReading.idl",
+    "/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_adapter/cartpole_interfaces:msg/TorqueCommand.idl"
+  ]
+}

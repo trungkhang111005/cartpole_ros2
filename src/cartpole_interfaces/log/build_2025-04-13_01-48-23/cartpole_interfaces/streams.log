@@ -1,0 +1,19 @@
+[0.012s] Invoking command in '/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces': CMAKE_PREFIX_PATH=/opt/ros/jazzy PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake /home/kai/ros2_ws/src/cartpole_interfaces -DCMAKE_INSTALL_PREFIX=/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces
+[0.033s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.353s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.379s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.392s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.408s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.425s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.460s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.470s] -- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.930s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:223 (message):
+[0.931s]   Packages installing interfaces must include
+[0.931s]   '<member_of_group>rosidl_interface_packages</member_of_group>' in their
+[0.931s]   package.xml
+[0.931s] Call Stack (most recent call first):
+[0.931s]   CMakeLists.txt:13 (rosidl_generate_interfaces)
+[0.931s] 
+[0.931s] [0m
+[0.931s] -- Configuring incomplete, errors occurred!
+[0.943s] Invoked command in '/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces' returned '1': CMAKE_PREFIX_PATH=/opt/ros/jazzy PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake /home/kai/ros2_ws/src/cartpole_interfaces -DCMAKE_INSTALL_PREFIX=/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces

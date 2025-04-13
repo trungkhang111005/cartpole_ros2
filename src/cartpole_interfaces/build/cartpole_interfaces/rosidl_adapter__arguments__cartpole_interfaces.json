@@ -1,0 +1,8 @@
+{
+  "package_name": "cartpole_interfaces",
+  "non_idl_tuples": [
+    "/home/kai/ros2_ws/src/cartpole_interfaces:msg/ImuReading.msg",
+    "/home/kai/ros2_ws/src/cartpole_interfaces:msg/PositionReading.msg",
+    "/home/kai/ros2_ws/src/cartpole_interfaces:msg/TorqueCommand.msg"
+  ]
+}

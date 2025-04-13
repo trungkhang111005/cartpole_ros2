@@ -1,0 +1,12 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cartpole_interfaces/msg/PositionReading.msg
+// generated code does not contain a copyright notice
+
+
+module cartpole_interfaces {
+  module msg {
+    struct PositionReading {
+      float x_cart_m;
+    };
+  };
+};

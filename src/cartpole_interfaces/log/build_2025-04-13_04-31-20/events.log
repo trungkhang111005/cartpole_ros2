@@ -1,0 +1,419 @@
+[0.000000] (-) TimerEvent: {}
+[0.000361] (cartpole_interfaces) JobQueued: {'identifier': 'cartpole_interfaces', 'dependencies': OrderedDict()}
+[0.000648] (cartpole_interfaces) JobStarted: {'identifier': 'cartpole_interfaces'}
+[0.014894] (cartpole_interfaces) JobProgress: {'identifier': 'cartpole_interfaces', 'progress': 'cmake'}
+[0.018554] (cartpole_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/kai/ros2_ws/src/cartpole_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces'], 'cwd': '/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'kai', 'SSH_CLIENT': 'fe80::1c98:d6:aaae:b5f7%wlan0 56593 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/kai', 'OLDPWD': '/home/kai/ros2_ws/src', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'kai', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': 'fe80::1c98:d6:aaae:b5f7%wlan0 56593 fe80::2ecf:67ff:fe5e:1269%wlan0 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy'}), 'shell': False}
+[0.099690] (-) TimerEvent: {}
+[0.200025] (-) TimerEvent: {}
+[0.252918] (cartpole_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.300154] (-) TimerEvent: {}
+[0.400464] (-) TimerEvent: {}
+[0.500763] (-) TimerEvent: {}
+[0.601089] (-) TimerEvent: {}
+[0.620855] (cartpole_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[0.674292] (cartpole_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.693862] (cartpole_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.701145] (-) TimerEvent: {}
+[0.720160] (cartpole_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.748555] (cartpole_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.801249] (-) TimerEvent: {}
+[0.804281] (cartpole_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[0.823018] (cartpole_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[0.901369] (-) TimerEvent: {}
+[1.001714] (-) TimerEvent: {}
+[1.102043] (-) TimerEvent: {}
+[1.202328] (-) TimerEvent: {}
+[1.302596] (-) TimerEvent: {}
+[1.402909] (-) TimerEvent: {}
+[1.503295] (-) TimerEvent: {}
+[1.603602] (-) TimerEvent: {}
+[1.704044] (-) TimerEvent: {}
+[1.714154] (cartpole_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[1.804161] (-) TimerEvent: {}
+[1.904572] (-) TimerEvent: {}
+[2.004932] (-) TimerEvent: {}
+[2.105368] (-) TimerEvent: {}
+[2.205727] (-) TimerEvent: {}
+[2.306039] (-) TimerEvent: {}
+[2.406378] (-) TimerEvent: {}
+[2.506642] (-) TimerEvent: {}
+[2.606930] (-) TimerEvent: {}
+[2.707277] (-) TimerEvent: {}
+[2.761209] (cartpole_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.807392] (-) TimerEvent: {}
+[2.907737] (-) TimerEvent: {}
+[3.008014] (-) TimerEvent: {}
+[3.108331] (-) TimerEvent: {}
+[3.167579] (cartpole_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.171996] (cartpole_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[3.208421] (-) TimerEvent: {}
+[3.308776] (-) TimerEvent: {}
+[3.374204] (cartpole_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[3.408856] (-) TimerEvent: {}
+[3.509190] (-) TimerEvent: {}
+[3.609568] (-) TimerEvent: {}
+[3.709968] (-) TimerEvent: {}
+[3.810276] (-) TimerEvent: {}
+[3.910554] (-) TimerEvent: {}
+[4.010806] (-) TimerEvent: {}
+[4.111100] (-) TimerEvent: {}
+[4.211371] (-) TimerEvent: {}
+[4.258727] (cartpole_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[4.311337] (cartpole_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[4.311584] (-) TimerEvent: {}
+[4.367399] (cartpole_interfaces) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[4.368507] (cartpole_interfaces) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_generator_c>;$<BUILD_INTERFACE:/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_typesupport_fastrtps_c>;$<BUILD_INTERFACE:/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_generator_cpp>;$<BUILD_INTERFACE:/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_typesupport_fastrtps_cpp>;$<BUILD_INTERFACE:/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_typesupport_introspection_c>;$<BUILD_INTERFACE:/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_typesupport_introspection_cpp>;/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_generator_c;/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces/rosidl_generator_py\n'}
+[4.368674] (cartpole_interfaces) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[4.371359] (cartpole_interfaces) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[4.371462] (cartpole_interfaces) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[4.375569] (cartpole_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.378218] (cartpole_interfaces) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[4.392483] (cartpole_interfaces) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[4.392606] (cartpole_interfaces) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[4.395209] (cartpole_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.399798] (cartpole_interfaces) StdoutLine: {'line': b'-- Configuring done (4.2s)\n'}
+[4.411654] (-) TimerEvent: {}
+[4.478828] (cartpole_interfaces) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[4.494558] (cartpole_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces\n'}
+[4.511738] (-) TimerEvent: {}
+[4.520608] (cartpole_interfaces) CommandEnded: {'returncode': 0}
+[4.521252] (cartpole_interfaces) JobProgress: {'identifier': 'cartpole_interfaces', 'progress': 'build'}
+[4.522025] (cartpole_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'kai', 'SSH_CLIENT': 'fe80::1c98:d6:aaae:b5f7%wlan0 56593 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/kai', 'OLDPWD': '/home/kai/ros2_ws/src', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'kai', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': 'fe80::1c98:d6:aaae:b5f7%wlan0 56593 fe80::2ecf:67ff:fe5e:1269%wlan0 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy'}), 'shell': False}
+[4.610694] (cartpole_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[4.611843] (-) TimerEvent: {}
+[4.626269] (cartpole_interfaces) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_copy_cartpole_interfaces\n'}
+[4.711976] (-) TimerEvent: {}
+[4.812403] (-) TimerEvent: {}
+[4.909688] (cartpole_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[4.910781] (cartpole_interfaces) StdoutLine: {'line': b'creating cartpole_interfaces.egg-info\n'}
+[4.912471] (-) TimerEvent: {}
+[4.933191] (cartpole_interfaces) StdoutLine: {'line': b'writing cartpole_interfaces.egg-info/PKG-INFO\n'}
+[4.933578] (cartpole_interfaces) StdoutLine: {'line': b'writing dependency_links to cartpole_interfaces.egg-info/dependency_links.txt\n'}
+[4.933828] (cartpole_interfaces) StdoutLine: {'line': b'writing top-level names to cartpole_interfaces.egg-info/top_level.txt\n'}
+[4.934041] (cartpole_interfaces) StdoutLine: {'line': b"writing manifest file 'cartpole_interfaces.egg-info/SOURCES.txt'\n"}
+[4.984729] (cartpole_interfaces) StdoutLine: {'line': b'[  1%] Built target cartpole_interfaces__rosidl_generator_type_description\n'}
+[5.003436] (cartpole_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[5.006303] (cartpole_interfaces) StdoutLine: {'line': b"reading manifest file 'cartpole_interfaces.egg-info/SOURCES.txt'\n"}
+[5.010188] (cartpole_interfaces) StdoutLine: {'line': b"writing manifest file 'cartpole_interfaces.egg-info/SOURCES.txt'\n"}
+[5.012631] (-) TimerEvent: {}
+[5.023757] (cartpole_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[5.099518] (cartpole_interfaces) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_cartpole_interfaces_egg\n'}
+[5.112745] (-) TimerEvent: {}
+[5.213045] (-) TimerEvent: {}
+[5.313323] (-) TimerEvent: {}
+[5.413579] (-) TimerEvent: {}
+[5.514120] (-) TimerEvent: {}
+[5.589719] (cartpole_interfaces) StdoutLine: {'line': b'[  5%] Built target cartpole_interfaces__cpp\n'}
+[5.615095] (-) TimerEvent: {}
+[5.668030] (cartpole_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cartpole_interfaces/msg/detail/position_reading__description.c.o\x1b[0m\n'}
+[5.668351] (cartpole_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cartpole_interfaces/msg/detail/imu_reading__description.c.o\x1b[0m\n'}
+[5.668489] (cartpole_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cartpole_interfaces/msg/detail/imu_reading__functions.c.o\x1b[0m\n'}
+[5.668576] (cartpole_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cartpole_interfaces/msg/detail/imu_reading__type_support.c.o\x1b[0m\n'}
+[5.715217] (-) TimerEvent: {}
+[5.815609] (-) TimerEvent: {}
+[5.916035] (-) TimerEvent: {}
+[6.013841] (cartpole_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cartpole_interfaces/msg/detail/position_reading__functions.c.o\x1b[0m\n'}
+[6.016133] (-) TimerEvent: {}
+[6.096845] (cartpole_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cartpole_interfaces/msg/detail/torque_command__description.c.o\x1b[0m\n'}
+[6.097216] (cartpole_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cartpole_interfaces/msg/detail/position_reading__type_support.c.o\x1b[0m\n'}
+[6.117164] (-) TimerEvent: {}
+[6.144185] (cartpole_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cartpole_interfaces/msg/detail/torque_command__type_support.c.o\x1b[0m\n'}
+[6.146863] (cartpole_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cartpole_interfaces/msg/detail/torque_command__functions.c.o\x1b[0m\n'}
+[6.217295] (-) TimerEvent: {}
+[6.224245] (cartpole_interfaces) StdoutLine: {'line': b'[ 24%] \x1b[32m\x1b[1mLinking C shared library libcartpole_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[6.317410] (-) TimerEvent: {}
+[6.336305] (cartpole_interfaces) StdoutLine: {'line': b'[ 24%] Built target cartpole_interfaces__rosidl_generator_c\n'}
+[6.358293] (cartpole_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.358644] (cartpole_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[6.358766] (cartpole_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.358856] (cartpole_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[6.420083] (-) TimerEvent: {}
+[6.520692] (-) TimerEvent: {}
+[6.621312] (-) TimerEvent: {}
+[6.721681] (-) TimerEvent: {}
+[6.824240] (-) TimerEvent: {}
+[6.861752] (cartpole_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cartpole_interfaces/msg/imu_reading__type_support.cpp.o\x1b[0m\n'}
+[6.924378] (-) TimerEvent: {}
+[6.954414] (cartpole_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cartpole_interfaces/msg/detail/imu_reading__type_support.c.o\x1b[0m\n'}
+[7.017831] (cartpole_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cartpole_interfaces/msg/detail/dds_fastrtps/imu_reading__type_support.cpp.o\x1b[0m\n'}
+[7.024531] (-) TimerEvent: {}
+[7.033689] (cartpole_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/imu_reading__type_support_c.cpp.o\x1b[0m\n'}
+[7.037035] (cartpole_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cartpole_interfaces/msg/detail/position_reading__type_support.c.o\x1b[0m\n'}
+[7.102828] (cartpole_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cartpole_interfaces/msg/detail/torque_command__type_support.c.o\x1b[0m\n'}
+[7.124661] (-) TimerEvent: {}
+[7.165512] (cartpole_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32m\x1b[1mLinking C shared library libcartpole_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[7.222914] (cartpole_interfaces) StdoutLine: {'line': b'[ 44%] Built target cartpole_interfaces__rosidl_typesupport_introspection_c\n'}
+[7.224754] (-) TimerEvent: {}
+[7.239742] (cartpole_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[7.301226] (cartpole_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cartpole_interfaces/msg/position_reading__type_support.cpp.o\x1b[0m\n'}
+[7.325009] (-) TimerEvent: {}
+[7.388141] (cartpole_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cartpole_interfaces/msg/torque_command__type_support.cpp.o\x1b[0m\n'}
+[7.425146] (-) TimerEvent: {}
+[7.468230] (cartpole_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libcartpole_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[7.525307] (-) TimerEvent: {}
+[7.556802] (cartpole_interfaces) StdoutLine: {'line': b'[ 51%] Built target cartpole_interfaces__rosidl_typesupport_c\n'}
+[7.575029] (cartpole_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[7.625436] (-) TimerEvent: {}
+[7.729067] (-) TimerEvent: {}
+[7.829513] (-) TimerEvent: {}
+[7.893100] (cartpole_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cartpole_interfaces/msg/detail/imu_reading__type_support.cpp.o\x1b[0m\n'}
+[7.929644] (-) TimerEvent: {}
+[8.030335] (-) TimerEvent: {}
+[8.131216] (-) TimerEvent: {}
+[8.141849] (cartpole_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cartpole_interfaces/msg/imu_reading__type_support.cpp.o\x1b[0m\n'}
+[8.222744] (cartpole_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/position_reading__type_support_c.cpp.o\x1b[0m\n'}
+[8.223075] (cartpole_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cartpole_interfaces/msg/detail/dds_fastrtps/position_reading__type_support.cpp.o\x1b[0m\n'}
+[8.231370] (-) TimerEvent: {}
+[8.332061] (-) TimerEvent: {}
+[8.434300] (-) TimerEvent: {}
+[8.536305] (-) TimerEvent: {}
+[8.541579] (cartpole_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cartpole_interfaces/msg/detail/position_reading__type_support.cpp.o\x1b[0m\n'}
+[8.636474] (-) TimerEvent: {}
+[8.737191] (-) TimerEvent: {}
+[8.770219] (cartpole_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cartpole_interfaces/msg/position_reading__type_support.cpp.o\x1b[0m\n'}
+[8.837337] (-) TimerEvent: {}
+[8.938043] (-) TimerEvent: {}
+[9.040293] (-) TimerEvent: {}
+[9.130346] (cartpole_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cartpole_interfaces/msg/detail/torque_command__type_support_c.cpp.o\x1b[0m\n'}
+[9.141392] (-) TimerEvent: {}
+[9.170665] (cartpole_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cartpole_interfaces/msg/detail/torque_command__type_support.cpp.o\x1b[0m\n'}
+[9.182040] (cartpole_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cartpole_interfaces/msg/detail/dds_fastrtps/torque_command__type_support.cpp.o\x1b[0m\n'}
+[9.244061] (-) TimerEvent: {}
+[9.344533] (-) TimerEvent: {}
+[9.399154] (cartpole_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/cartpole_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cartpole_interfaces/msg/torque_command__type_support.cpp.o\x1b[0m\n'}
+[9.447065] (-) TimerEvent: {}
+[9.547546] (-) TimerEvent: {}
+[9.648286] (-) TimerEvent: {}
+[9.748937] (-) TimerEvent: {}
+[9.813113] (cartpole_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libcartpole_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[9.849083] (-) TimerEvent: {}
+[9.905435] (cartpole_interfaces) StdoutLine: {'line': b'[ 74%] Built target cartpole_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[9.949207] (-) TimerEvent: {}
+[10.017192] (cartpole_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library libcartpole_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[10.033757] (cartpole_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX shared library libcartpole_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[10.049358] (-) TimerEvent: {}
+[10.095171] (cartpole_interfaces) StdoutLine: {'line': b'[ 77%] Built target cartpole_interfaces__rosidl_typesupport_cpp\n'}
+[10.128601] (cartpole_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libcartpole_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[10.134686] (cartpole_interfaces) StdoutLine: {'line': b'[ 79%] Built target cartpole_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[10.149481] (-) TimerEvent: {}
+[10.207863] (cartpole_interfaces) StdoutLine: {'line': b'[ 79%] Built target cartpole_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[10.241157] (cartpole_interfaces) StdoutLine: {'line': b'[ 79%] Built target cartpole_interfaces\n'}
+[10.249588] (-) TimerEvent: {}
+[10.273875] (cartpole_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[10.349694] (-) TimerEvent: {}
+[10.449986] (-) TimerEvent: {}
+[10.550218] (-) TimerEvent: {}
+[10.650411] (-) TimerEvent: {}
+[10.750590] (-) TimerEvent: {}
+[10.850837] (-) TimerEvent: {}
+[10.873922] (cartpole_interfaces) StdoutLine: {'line': b'[ 81%] Built target cartpole_interfaces__py\n'}
+[10.908668] (cartpole_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cartpole_interfaces/msg/_position_reading_s.c.o\x1b[0m\n'}
+[10.909089] (cartpole_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cartpole_interfaces/msg/_imu_reading_s.c.o\x1b[0m\n'}
+[10.909260] (cartpole_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cartpole_interfaces/msg/_torque_command_s.c.o\x1b[0m\n'}
+[10.950945] (-) TimerEvent: {}
+[11.051494] (-) TimerEvent: {}
+[11.151884] (-) TimerEvent: {}
+[11.179800] (cartpole_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking C shared library libcartpole_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[11.251881] (cartpole_interfaces) StdoutLine: {'line': b'[ 88%] Built target cartpole_interfaces__rosidl_generator_py\n'}
+[11.252169] (-) TimerEvent: {}
+[11.287388] (cartpole_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/cartpole_interfaces/_cartpole_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[11.287747] (cartpole_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/cartpole_interfaces/_cartpole_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[11.287942] (cartpole_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/cartpole_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/cartpole_interfaces/_cartpole_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[11.354077] (-) TimerEvent: {}
+[11.454690] (-) TimerEvent: {}
+[11.471276] (cartpole_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/cartpole_interfaces/cartpole_interfaces_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[11.471728] (cartpole_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/cartpole_interfaces/cartpole_interfaces_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[11.483819] (cartpole_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/cartpole_interfaces/cartpole_interfaces_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[11.526861] (cartpole_interfaces) StdoutLine: {'line': b'[100%] Built target cartpole_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[11.528498] (cartpole_interfaces) StdoutLine: {'line': b'[100%] Built target cartpole_interfaces_s__rosidl_typesupport_c\n'}
+[11.541308] (cartpole_interfaces) StdoutLine: {'line': b'[100%] Built target cartpole_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[11.554801] (-) TimerEvent: {}
+[11.561856] (cartpole_interfaces) CommandEnded: {'returncode': 0}
+[11.562687] (cartpole_interfaces) JobProgress: {'identifier': 'cartpole_interfaces', 'progress': 'install'}
+[11.578280] (cartpole_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces'], 'cwd': '/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'kai', 'SSH_CLIENT': 'fe80::1c98:d6:aaae:b5f7%wlan0 56593 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/kai', 'OLDPWD': '/home/kai/ros2_ws/src', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'kai', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/kai/ros2_ws/src/cartpole_interfaces/build/cartpole_interfaces', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': 'fe80::1c98:d6:aaae:b5f7%wlan0 56593 fe80::2ecf:67ff:fe5e:1269%wlan0 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy'}), 'shell': False}
+[11.592700] (cartpole_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.592993] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/ament_index/resource_index/rosidl_interfaces/cartpole_interfaces\n'}
+[11.593304] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/msg/ImuReading.json\n'}
+[11.593509] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/msg/PositionReading.json\n'}
+[11.593716] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/msg/TorqueCommand.json\n'}
+[11.593934] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces\n'}
+[11.594274] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg\n'}
+[11.594405] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/imu_reading.h\n'}
+[11.594558] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[11.594712] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/position_reading.h\n'}
+[11.594866] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/torque_command.h\n'}
+[11.595001] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail\n'}
+[11.595121] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__struct.h\n'}
+[11.595259] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__type_support.h\n'}
+[11.595385] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__description.c\n'}
+[11.595513] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__struct.h\n'}
+[11.595637] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__functions.c\n'}
+[11.595781] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__description.c\n'}
+[11.595914] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__functions.h\n'}
+[11.596058] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__type_support.c\n'}
+[11.596188] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__description.c\n'}
+[11.596316] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__functions.h\n'}
+[11.596463] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__functions.c\n'}
+[11.596595] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__type_support.h\n'}
+[11.596737] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__type_support.c\n'}
+[11.596870] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__type_support.h\n'}
+[11.597005] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__type_support.c\n'}
+[11.597138] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__functions.h\n'}
+[11.597286] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__struct.h\n'}
+[11.597415] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__functions.c\n'}
+[11.597673] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/environment/library_path.sh\n'}
+[11.597848] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/environment/library_path.dsv\n'}
+[11.598096] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_generator_c.so\n'}
+[11.598678] (cartpole_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_generator_c.so" to ""\n'}
+[11.598792] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces\n'}
+[11.598908] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg\n'}
+[11.599001] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[11.599297] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail\n'}
+[11.599409] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__rosidl_typesupport_fastrtps_c.h\n'}
+[11.599511] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__rosidl_typesupport_fastrtps_c.h\n'}
+[11.599629] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__rosidl_typesupport_fastrtps_c.h\n'}
+[11.599827] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[11.600401] (cartpole_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[11.600525] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces\n'}
+[11.600608] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg\n'}
+[11.600719] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[11.600795] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/position_reading.hpp\n'}
+[11.600895] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/torque_command.hpp\n'}
+[11.601005] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/imu_reading.hpp\n'}
+[11.601113] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail\n'}
+[11.601216] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__traits.hpp\n'}
+[11.601320] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__traits.hpp\n'}
+[11.601422] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__type_support.hpp\n'}
+[11.601554] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__struct.hpp\n'}
+[11.601693] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__traits.hpp\n'}
+[11.601820] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__struct.hpp\n'}
+[11.601957] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__builder.hpp\n'}
+[11.602097] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__struct.hpp\n'}
+[11.602231] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__builder.hpp\n'}
+[11.602359] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__type_support.hpp\n'}
+[11.602486] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__type_support.hpp\n'}
+[11.602617] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__builder.hpp\n'}
+[11.602797] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces\n'}
+[11.602914] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg\n'}
+[11.603004] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[11.603119] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail\n'}
+[11.603196] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.603285] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.603379] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/dds_fastrtps\n'}
+[11.603484] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.603686] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[11.604277] (cartpole_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[11.604399] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces\n'}
+[11.604480] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg\n'}
+[11.604590] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail\n'}
+[11.604693] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__rosidl_typesupport_introspection_c.h\n'}
+[11.604770] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__rosidl_typesupport_introspection_c.h\n'}
+[11.604871] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__type_support.c\n'}
+[11.604982] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__type_support.c\n'}
+[11.605093] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__rosidl_typesupport_introspection_c.h\n'}
+[11.605201] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__type_support.c\n'}
+[11.605356] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[11.605539] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[11.606087] (cartpole_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[11.606186] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_typesupport_c.so\n'}
+[11.606700] (cartpole_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[11.606794] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces\n'}
+[11.606900] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg\n'}
+[11.607020] (cartpole_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail\n'}
+[11.607101] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.607202] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.607292] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/position_reading__type_support.cpp\n'}
+[11.607387] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/torque_command__type_support.cpp\n'}
+[11.607500] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__type_support.cpp\n'}
+[11.607635] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/include/cartpole_interfaces/cartpole_interfaces/msg/detail/imu_reading__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.607838] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[11.608394] (cartpole_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[11.608505] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_typesupport_cpp.so\n'}
+[11.609020] (cartpole_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[11.609129] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/environment/pythonpath.sh\n'}
+[11.609267] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/environment/pythonpath.dsv\n'}
+[11.609421] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces-0.0.0-py3.12.egg-info\n'}
+[11.609581] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[11.609713] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[11.609835] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[11.609965] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[11.610139] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces\n'}
+[11.610242] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg\n'}
+[11.610332] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg/_imu_reading_s.c\n'}
+[11.610476] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg/_torque_command.py\n'}
+[11.610610] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg/_imu_reading.py\n'}
+[11.610743] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg/_position_reading.py\n'}
+[11.610877] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg/__init__.py\n'}
+[11.611057] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg/_position_reading_s.c\n'}
+[11.611185] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg/_torque_command_s.c\n'}
+[11.611312] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/_cartpole_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[11.611463] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/cartpole_interfaces_s__rosidl_typesupport_c.so\n'}
+[11.611725] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/_cartpole_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[11.611883] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/__init__.py\n'}
+[11.612004] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/_cartpole_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[11.612159] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/cartpole_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[11.612426] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/cartpole_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[11.654869] (-) TimerEvent: {}
+[11.676041] (cartpole_interfaces) StdoutLine: {'line': b"Listing '/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces'...\n"}
+[11.676262] (cartpole_interfaces) StdoutLine: {'line': b"Compiling '/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/__init__.py'...\n"}
+[11.676392] (cartpole_interfaces) StdoutLine: {'line': b"Listing '/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg'...\n"}
+[11.676476] (cartpole_interfaces) StdoutLine: {'line': b"Compiling '/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg/__init__.py'...\n"}
+[11.676570] (cartpole_interfaces) StdoutLine: {'line': b"Compiling '/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg/_imu_reading.py'...\n"}
+[11.676654] (cartpole_interfaces) StdoutLine: {'line': b"Compiling '/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg/_position_reading.py'...\n"}
+[11.676745] (cartpole_interfaces) StdoutLine: {'line': b"Compiling '/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/msg/_torque_command.py'...\n"}
+[11.688261] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/cartpole_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[11.688873] (cartpole_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/cartpole_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[11.689247] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/cartpole_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[11.689800] (cartpole_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/cartpole_interfaces_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[11.690130] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/cartpole_interfaces_s__rosidl_typesupport_c.so\n'}
+[11.690653] (cartpole_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/python3.12/site-packages/cartpole_interfaces/cartpole_interfaces_s__rosidl_typesupport_c.so" to ""\n'}
+[11.690770] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_generator_py.so\n'}
+[11.691355] (cartpole_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/lib/libcartpole_interfaces__rosidl_generator_py.so" to ""\n'}
+[11.691472] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/msg/ImuReading.idl\n'}
+[11.691616] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/msg/PositionReading.idl\n'}
+[11.691788] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/msg/TorqueCommand.idl\n'}
+[11.691955] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/msg/ImuReading.msg\n'}
+[11.692137] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/msg/PositionReading.msg\n'}
+[11.692294] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/msg/TorqueCommand.msg\n'}
+[11.692543] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/ament_index/resource_index/package_run_dependencies/cartpole_interfaces\n'}
+[11.692775] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/ament_index/resource_index/parent_prefix_path/cartpole_interfaces\n'}
+[11.692965] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/environment/ament_prefix_path.sh\n'}
+[11.693139] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/environment/ament_prefix_path.dsv\n'}
+[11.693302] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/environment/path.sh\n'}
+[11.693465] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/environment/path.dsv\n'}
+[11.693630] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/local_setup.bash\n'}
+[11.693799] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/local_setup.sh\n'}
+[11.693974] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/local_setup.zsh\n'}
+[11.694140] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/local_setup.dsv\n'}
+[11.694303] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/package.dsv\n'}
+[11.694545] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/ament_index/resource_index/packages/cartpole_interfaces\n'}
+[11.694786] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/export_cartpole_interfaces__rosidl_generator_cExport.cmake\n'}
+[11.694983] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/export_cartpole_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[11.695185] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/export_cartpole_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[11.695364] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/export_cartpole_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[11.695551] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/export_cartpole_interfaces__rosidl_generator_cppExport.cmake\n'}
+[11.695740] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/export_cartpole_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[11.695922] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/export_cartpole_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[11.696116] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/cartpole_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[11.696292] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/cartpole_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[11.696478] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/cartpole_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[11.696655] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/cartpole_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[11.696846] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/cartpole_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[11.697060] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/cartpole_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[11.697272] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/cartpole_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[11.697470] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/cartpole_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[11.697684] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/export_cartpole_interfaces__rosidl_generator_pyExport.cmake\n'}
+[11.697869] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/export_cartpole_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[11.698060] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[11.698244] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[11.698425] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[11.698609] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[11.698791] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[11.698973] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[11.699177] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[11.699362] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/cartpole_interfacesConfig.cmake\n'}
+[11.699505] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/cmake/cartpole_interfacesConfig-version.cmake\n'}
+[11.699673] (cartpole_interfaces) StdoutLine: {'line': b'-- Installing: /home/kai/ros2_ws/src/cartpole_interfaces/install/cartpole_interfaces/share/cartpole_interfaces/package.xml\n'}
+[11.703268] (cartpole_interfaces) CommandEnded: {'returncode': 0}
+[11.753090] (cartpole_interfaces) JobEnded: {'identifier': 'cartpole_interfaces', 'rc': 0}
+[11.754377] (-) EventReactorShutdown: {}

@@ -1,0 +1,32 @@
+[0.011s] Invoking command in '/home/kai/ros2_ws/build/cartpole_interfaces': CMAKE_PREFIX_PATH=/opt/ros/jazzy PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake /home/kai/ros2_ws/src/cartpole_interfaces -DCMAKE_INSTALL_PREFIX=/home/kai/ros2_ws/install/cartpole_interfaces
+[0.109s] -- The C compiler identification is GNU 13.3.0
+[0.208s] -- The CXX compiler identification is GNU 13.3.0
+[0.234s] -- Detecting C compiler ABI info
+[0.386s] -- Detecting C compiler ABI info - done
+[0.400s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.401s] -- Detecting C compile features
+[0.401s] -- Detecting C compile features - done
+[0.414s] -- Detecting CXX compiler ABI info
+[0.585s] -- Detecting CXX compiler ABI info - done
+[0.601s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.602s] -- Detecting CXX compile features
+[0.602s] -- Detecting CXX compile features - done
+[0.605s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.811s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.951s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.987s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.003s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.021s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.043s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.082s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.096s] -- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.562s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:223 (message):
+[1.562s]   Packages installing interfaces must include
+[1.562s]   '<member_of_group>rosidl_interface_packages</member_of_group>' in their
+[1.562s]   package.xml
+[1.562s] Call Stack (most recent call first):
+[1.562s]   CMakeLists.txt:13 (rosidl_generate_interfaces)
+[1.562s] 
+[1.563s] [0m
+[1.563s] -- Configuring incomplete, errors occurred!
+[1.578s] Invoked command in '/home/kai/ros2_ws/build/cartpole_interfaces' returned '1': CMAKE_PREFIX_PATH=/opt/ros/jazzy PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake /home/kai/ros2_ws/src/cartpole_interfaces -DCMAKE_INSTALL_PREFIX=/home/kai/ros2_ws/install/cartpole_interfaces
