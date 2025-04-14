@@ -43,6 +43,7 @@ class IMUNode(Node):
 		msg.angle_deg = float(self.angle)
 		msg.angular_velocity = float(self.angle_vel)
 		self.publisher_.publish(msg)
+		self.get_logger().info(f"[IMU] θ: {self.angle:.2f}°, θ̇: {self.angle_vel:.2f}°/s")
 def main():
 	rclpy.init()
 	node = IMUNode()

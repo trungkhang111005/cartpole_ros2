@@ -16,6 +16,7 @@ class ServoNode(Node):
 		duty = 50 + (torque / 1.4) * 50
 		duty = max(min(duty, 100), 0)
 		lgpio.tx_pwm(self.h, self.pwm_channel, self.freq, duty)
+		self.get_logger().info(f"[Servo] Received torque: {msg.torque_nm:.3f} Nm → duty: {duty:.2f}%")
 def main():
         rclpy.init()
         node = ServoNode()

@@ -43,6 +43,11 @@ class ControllerNode(Node):
 		msg = TorqueCommand()
 		msg.torque_nm = float(torque)
 		self.pub_cmd.publish(msg)
+		self.get_logger().info(
+			f"[Control] θ: {math.degrees(self.theta):.2f}°, θ̇: {math.degrees(self.theta_dot):.2f}°/s, "
+			f"x_cart: {self.x_cart:.4f} m, torque: {torque:.3f} Nm"
+		)
+
 def main():
         rclpy.init()
         node = ControllerNode()
