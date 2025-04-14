@@ -1,3 +1,6 @@
+import rclpy
+import time
+from rclpy.node import Node
 from cartpole_interfaces.msg import PositionReading
 import lgpio
 
@@ -34,7 +37,7 @@ class UltrasonicNode(Node):
 		dist = self.measure_distance()
 		if dist is not None:
 			msg = PositionReading()
-			msg.cart_position = dist
+			msg.x_cart_m = dist
 			self.publisher_.publish(msg)
 def main():
         rclpy.init()

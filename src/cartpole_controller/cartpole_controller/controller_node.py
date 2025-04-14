@@ -1,4 +1,9 @@
+import rclpy
+import math
+from cartpole_interfaces.msg import ImuReading
+from cartpole_interfaces.msg import PositionReading
 from cartpole_interfaces.msg import TorqueCommand
+from rclpy.node import Node
 
 class ControllerNode(Node):
 	def __init__(self):
@@ -15,12 +20,12 @@ class ControllerNode(Node):
 		return base + (max_k - base) * min(abs(x)/thresh, 1.0)
 
 	def imu_callback(self, msg):
-		self.theta = math.radians(msg.angle)
-		self.theta_dot = math.radians(msg.angle_velocity)
+		self.theta = math.radians(msg.angle_deg)
+		self.theta_dot = math.radians(msg.angular_velocity)
 		self.publish_torque()
 
 	def pos_callback(self, msg):
-		self.x_cart = msg.cart_position
+		self.x_cart = msg.x_cart_m
 		self.publish_torque()
 
 	def publish_torque(self):
@@ -36,7 +41,7 @@ class ControllerNode(Node):
 			torque = self.prev_torque + 0.05 * math.copysign(1, delta)
 		self.prev_torque = torque
 		msg = TorqueCommand()
-		msg.torque = float(torque)
+		msg.torque_nm = float(torque)
 		self.pub_cmd.publish(msg)
 def main():
         rclpy.init()

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Imu  # For future std_msg integration
 from cartpole_interfaces.msg import ImuReading
 from smbus2 import SMBus
 import math
@@ -41,8 +40,8 @@ class IMUNode(Node):
 		self.angle = 0.98 * (self.angle + self.angle_vel * dt) + 0.02 * acc_angle
 
 		msg = ImuReading()
-		msg.angle = float(self.angle)
-		msg.angle_velocity = float(self.angle_vel)
+		msg.angle_deg = float(self.angle)
+		msg.angular_velocity = float(self.angle_vel)
 		self.publisher_.publish(msg)
 def main():
 	rclpy.init()

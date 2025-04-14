@@ -1,3 +1,7 @@
+import rclpy
+import lgpio
+from rclpy.node import Node
+from cartpole_interfaces.msg import TorqueCommand
 class ServoNode(Node):
 	def __init__(self):
 		super().__init__('servo_node')
@@ -8,7 +12,7 @@ class ServoNode(Node):
 		lgpio.gpio_claim_output(self.h, self.pwm_channel)
 
 	def command_callback(self, msg):
-		torque = max(min(msg.torque, 1.4), -1.4)
+		torque = max(min(msg.torque_nm, 1.4), -1.4)
 		duty = 50 + (torque / 1.4) * 50
 		duty = max(min(duty, 100), 0)
 		lgpio.tx_pwm(self.h, self.pwm_channel, self.freq, duty)
