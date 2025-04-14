@@ -4,7 +4,11 @@ from cartpole_interfaces.msg import ImuReading
 from cartpole_interfaces.msg import PositionReading
 from cartpole_interfaces.msg import TorqueCommand
 from rclpy.node import Node
-
+K_THETA = 1.29925900258370
+K_THETA_DOT = 0.418344546645474
+K_X = -0.790569415042121
+THRESHOLD_THETA = 12
+THRESHOLD_THETA_DOT = 50
 class ControllerNode(Node):
 	def __init__(self):
 		super().__init__('controller_node')
@@ -29,11 +33,11 @@ class ControllerNode(Node):
 		self.publish_torque()
 
 	def publish_torque(self):
-		k_theta = self.scaled_gain(self.theta, 10.161, 10.161, 8)
-		k_theta_dot = self.scaled_gain(self.theta_dot, 3.17, 3.17, 25)
-		k_x = -5.0
+		k_theta = self.scaled_gain(self.theta, K_THETA, K_THETA, THRESHOLD_THETA)
+		k_theta_dot = self.scaled_gain(self.theta_dot, K_THETA_DOT, K_THETA_DOT, THRESHOLD_THETA_DOT)
+		k_x = K_X
 		if abs(math.degrees(self.theta)) > 12:
-			torque = -(k_theta * 0 + k_theta_dot * 0 + 0.3 * self.x_cart)
+			torque = -(0.3 * self.x_cart)
 		else:
 			torque = -(k_theta * self.theta + k_theta_dot * self.theta_dot + k_x * self.x_cart)
 		delta = torque - self.prev_torque
