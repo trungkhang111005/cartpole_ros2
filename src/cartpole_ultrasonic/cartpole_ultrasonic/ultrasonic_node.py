@@ -11,7 +11,7 @@ class UltrasonicNode(Node):
 		self.timer = self.create_timer(0.05, self.publish_position)
 		self.h = lgpio.gpiochip_open(4)
 		self.trig, self.echo = 15, 14
-		self.midpoint = 0.349
+		self.midpoint = 0.37
 		lgpio.gpio_claim_output(self.h, self.trig)
 		lgpio.gpio_claim_input(self.h, self.echo)
 
