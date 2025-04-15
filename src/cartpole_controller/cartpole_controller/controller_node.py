@@ -5,10 +5,10 @@ from cartpole_interfaces.msg import PositionReading
 from cartpole_interfaces.msg import TorqueCommand
 from cartpole_interfaces.msg import VelocityReading
 from rclpy.node import Node
-K_THETA = 7.7720
-K_THETA_DOT = 0.9336
-K_X = -2.5
-K_X_DOT = 1.6281
+K_THETA = 3
+K_THETA_DOT = 0
+K_X = 0
+K_X_DOT = 0.94
 THRESHOLD_THETA = 20
 THRESHOLD_THETA_DOT = 50
 class ControllerNode(Node):
@@ -16,7 +16,7 @@ class ControllerNode(Node):
 		super().__init__('controller_node')
 		self.sub_imu = self.create_subscription(ImuReading, 'imu_data', self.imu_callback, 10)
 		self.sub_pos = self.create_subscription(PositionReading, 'position_data', self.pos_callback, 10)
-		self.sub_pos = self.create_subscription(VelocityReading, 'cart_v_data', self.pos_callback, 10)
+		self.sub_vel = self.create_subscription(VelocityReading, 'cart_x_dot_m', self.vel_callback, 10)
 		self.pub_cmd = self.create_publisher(TorqueCommand, 'torque_cmd', 10)
 		self.theta = 0.0
 		self.theta_dot = 0.0
@@ -36,15 +36,21 @@ class ControllerNode(Node):
 		self.x_cart = msg.x_cart_m
 		self.publish_torque()
 	def vel_callback(self, msg):
-		self.x_cart_dot = msg.x_cart_dot_m
+		self.x_cart_dot = msg.cart_x_dot_m
 		self.publish_torque()
 	def publish_torque(self):
 		k_theta = self.scaled_gain(self.theta, K_THETA, K_THETA, THRESHOLD_THETA)
 		k_theta_dot = self.scaled_gain(self.theta_dot, K_THETA_DOT, K_THETA_DOT, THRESHOLD_THETA_DOT)
 		if abs(math.degrees(self.theta)) > THRESHOLD_THETA:
 			torque = -(0.05 * self.x_cart)
+		elif abs(math.degrees(self.theta)) < 1:
+			torque = -(0.05 * self.x_cart)
 		else:
-			torque = -(k_theta * self.theta + k_theta_dot * self.theta_dot + K_X * self.x_cart + K_X_DOT * self.x_cart_dot)
+			torque = -(k_theta * self.theta + k_theta_dot * self.theta_dot + K_X * self.x_cart)
+		if torque < 0:
+			torque = torque + K_X_DOT * self.x_cart_dot
+		else:
+			torque = torque - K_X_DOT * self.x_cart_dot
 		delta = torque - self.prev_torque
 		if abs(delta) > 0.05:
 			torque = self.prev_torque + 0.05 * math.copysign(1, delta)

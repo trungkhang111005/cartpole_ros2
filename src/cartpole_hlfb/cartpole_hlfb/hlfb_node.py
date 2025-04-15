@@ -10,6 +10,8 @@ class HLFBReader:
 		self.chip = lgpio.gpiochip_open(chip)
 		self.pin = pin
 		lgpio.gpio_claim_input(self.chip, self.pin)
+		self.filtered_velocity = None
+		self.alpha = 0.95  # Tune this: lower = smoother but slower response
 
 	def measure_duty_cycle(self, timeout=1.0):
 		start_time = time.monotonic()
@@ -45,16 +47,19 @@ class HLFBNode(Node):
 		self.timer = self.create_timer(0.02, self.publish_velocity)  # 50 Hz
 		self.hlfb = HLFBReader(chip=4, pin=19)
 		self.max_velocity = 0.071 * 1500 / 60  # TRACK_LEN * MAX_RPS
-
 	def publish_velocity(self):
 		duty = self.hlfb.measure_duty_cycle()
 		if duty is not None:
-			velocity = (duty / 100.0) * self.max_velocity
+			raw_velocity = (duty / 100.0) * self.max_velocity
+			self.filtered_velocity = (
+				self.alpha * raw_velocity + (1 - self.alpha) * self.filtered_velocity
+			)
 			msg = VelocityReading()
-			msg.cart_x_dot_m = float(velocity)
+			msg.cart_x_dot_m = float(self.filtered_velocity)
 			self.publisher_.publish(msg)
 		else:
 			self.get_logger().warn("HLFB reading failed")
+
 
 	def destroy_node(self):
 		self.hlfb.close()
