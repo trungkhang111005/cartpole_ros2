@@ -5,10 +5,10 @@ from cartpole_interfaces.msg import PositionReading
 from cartpole_interfaces.msg import TorqueCommand
 from cartpole_interfaces.msg import VelocityReading
 from rclpy.node import Node
-K_THETA = 3
-K_THETA_DOT = 0
-K_X = 0
-K_X_DOT = 0.94
+K_THETA = 5.1739
+K_THETA_DOT = 2.771275450996806
+K_X = -2.66666666666671
+K_X_DOT = 0.957453803056633
 THRESHOLD_THETA = 20
 THRESHOLD_THETA_DOT = 50
 class ControllerNode(Node):
@@ -43,7 +43,7 @@ class ControllerNode(Node):
 		k_theta_dot = self.scaled_gain(self.theta_dot, K_THETA_DOT, K_THETA_DOT, THRESHOLD_THETA_DOT)
 		if abs(math.degrees(self.theta)) > THRESHOLD_THETA:
 			torque = -(0.05 * self.x_cart)
-		elif abs(math.degrees(self.theta)) < 1:
+		elif abs(math.degrees(self.theta)) < 2:
 			torque = -(0.05 * self.x_cart)
 		else:
 			torque = -(k_theta * self.theta + k_theta_dot * self.theta_dot + K_X * self.x_cart)
