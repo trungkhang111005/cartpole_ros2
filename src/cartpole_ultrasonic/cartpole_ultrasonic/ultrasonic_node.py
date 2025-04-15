@@ -17,9 +17,10 @@ class UltrasonicNode(Node):
 
 	def measure_distance(self):
 		lgpio.gpio_write(self.h, self.trig, 0)
-		time.sleep(0.000002)
 		lgpio.gpio_write(self.h, self.trig, 1)
-		time.sleep(0.00001)
+		start = time.perf_counter_ns()
+		while (time.perf_counter_ns() - start) < 10000:  # 10 µs
+			pass
 		lgpio.gpio_write(self.h, self.trig, 0)
 		start = time.perf_counter()
 		while lgpio.gpio_read(self.h, self.echo) == 0:
