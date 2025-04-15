@@ -2,25 +2,61 @@ import rclpy
 import lgpio
 from rclpy.node import Node
 from cartpole_interfaces.msg import TorqueCommand
-MAX_TORQUE = 1 #Nm
+
+MAX_TORQUE = 0.8  # Nm
+PWM_CHANNEL = 13
+PWM_FREQ = 200
+EN_CHANNEL = 5
+RELAY_CHANNEL = 26
+
 class ServoNode(Node):
 	def __init__(self):
 		super().__init__('servo_node')
-		self.sub_cmd = self.create_subscription(TorqueCommand, 'torque_cmd', self.command_callback, 10)
+
+		# GPIO setup
 		self.h = lgpio.gpiochip_open(4)
-		self.pwm_channel = 13
-		self.freq = 200
-		lgpio.gpio_claim_output(self.h, self.pwm_channel)
+		for pin in [PWM_CHANNEL, EN_CHANNEL, RELAY_CHANNEL]:
+			lgpio.gpio_claim_output(self.h, pin)
+
+		# Initial motor state
+		lgpio.gpio_write(self.h, EN_CHANNEL, 0)
+		lgpio.gpio_write(self.h, RELAY_CHANNEL, 1)
+
+		# PWM setup
+		self.pwm_channel = PWM_CHANNEL
+		self.freq = PWM_FREQ
+
+		# ROS 2 subscriber
+		self.sub_cmd = self.create_subscription(
+			TorqueCommand, 'torque_cmd', self.command_callback, 10)
 
 	def command_callback(self, msg):
 		torque = max(min(msg.torque_nm, MAX_TORQUE), -MAX_TORQUE)
-		duty = 50 + (torque / MAX_TORQUE) * 50
+		duty = 50 - (torque / MAX_TORQUE) * 50
 		duty = max(min(duty, 100), 0)
 		lgpio.tx_pwm(self.h, self.pwm_channel, self.freq, duty)
-		self.get_logger().info(f"[Servo] Received torque: {msg.torque_nm:.3f} Nm → duty: {duty:.2f}%")
+		self.get_logger().info(
+			f"[Servo] Torque: {msg.torque_nm:.3f} Nm → duty: {duty:.2f}%")
+
+	def destroy_node(self):
+		try:
+			lgpio.tx_pwm(self.h, self.pwm_channel, self.freq, 0)
+			for pin in [EN_CHANNEL, RELAY_CHANNEL, PWM_CHANNEL]:
+				lgpio.gpio_write(self.h, pin, 0)
+				lgpio.gpio_free(self.h, pin)
+			lgpio.gpiochip_close(self.h)
+			self.get_logger().info("[Shutdown] GPIOs released and motor disabled.")
+		except Exception as e:
+			self.get_logger().error(f"[Shutdown ERROR] {e}")
+		super().destroy_node()
+
 def main():
-        rclpy.init()
-        node = ServoNode()
-        rclpy.spin(node)
-        node.destroy_node()
-        rclpy.shutdown()
+	rclpy.init()
+	node = ServoNode()
+	try:
+		rclpy.spin(node)
+	except KeyboardInterrupt:
+		pass
+	finally:
+		node.destroy_node()
+		rclpy.shutdown()
