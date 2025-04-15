@@ -41,7 +41,7 @@ class HLFBReader:
 class HLFBNode(Node):
 	def __init__(self):
 		super().__init__('hlfb_node')
-		self.publisher_ = self.create_publisher(CartVelocity, 'cart_x_dot_m', 10)
+		self.publisher_ = self.create_publisher(VelocityReading, 'cart_x_dot_m', 10)
 		self.timer = self.create_timer(0.02, self.publish_velocity)  # 50 Hz
 		self.hlfb = HLFBReader(chip=4, pin=19)
 		self.max_velocity = 0.071 * 1500 / 60  # TRACK_LEN * MAX_RPS
@@ -50,8 +50,8 @@ class HLFBNode(Node):
 		duty = self.hlfb.measure_duty_cycle()
 		if duty is not None:
 			velocity = (duty / 100.0) * self.max_velocity
-			msg = CartVelocity()
-			msg.velocity_mps = float(velocity)
+			msg = VelocityReading()
+			msg.cart_x_dot_m = float(velocity)
 			self.publisher_.publish(msg)
 		else:
 			self.get_logger().warn("HLFB reading failed")

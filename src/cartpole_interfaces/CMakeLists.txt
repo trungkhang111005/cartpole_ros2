@@ -14,6 +14,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ImuReading.msg"
   "msg/PositionReading.msg"
   "msg/TorqueCommand.msg"
+  "msg/VelocityReading.msg"
 )
 
 ament_export_dependencies(rosidl_default_runtime)

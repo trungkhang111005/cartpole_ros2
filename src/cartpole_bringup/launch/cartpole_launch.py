@@ -16,15 +16,21 @@ def generate_launch_description():
 			output='screen'
 		),
 		Node(
-			package='cartpole_servo',
-			executable='servo_node',
-			name='servo_node',
-			output='screen'
-		),
+                        package='cartpole_hlfb',
+                        executable='hlfb_node',
+                        name='hlfb_node',
+                        output='screen'
+                ),
 		Node(
 			package='cartpole_controller',
 			executable='controller_node',
 			name='controller_node',
 			output='screen'
 		),
+		Node(
+                        package='cartpole_servo',
+                        executable='servo_node',
+                        name='servo_node',
+                        output='screen'
+                ),
 	])
