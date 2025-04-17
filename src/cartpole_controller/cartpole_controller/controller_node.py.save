@@ -28,18 +28,19 @@ class ControllerNode(Node):
 		self.x_cart = 0.0
 		self.x_cart_dot = 0.0
 		self.prev_torque = 0.0
-				# Run at ~200 Hz
-		self.control_timer = self.create_timer(0.005, self.publish_torque)
-
+	
 	def imu_callback(self, msg):
 		self.theta = math.radians(msg.angle_deg)
 		self.theta_dot = math.radians(msg.angular_velocity)
+		self.publish_torque()
 
 	def pos_callback(self, msg):
 		self.x_cart = msg.x_cart_m
+		self.publish_torque()
 
 	def vel_callback(self, msg):
 		self.x_cart_dot = msg.cart_x_dot_m
+		self.publish_torque()
 	def clamp(self, val, low, high):
 		return max(low, min(high, val))
 
