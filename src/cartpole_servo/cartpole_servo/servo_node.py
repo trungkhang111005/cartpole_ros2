@@ -8,20 +8,20 @@ PWM_CHANNEL = 13
 PWM_FREQ = 200
 EN_CHANNEL = 5
 RELAY_CHANNEL = 26
-
+A_CHANNEL = 6
 class ServoNode(Node):
 	def __init__(self):
 		super().__init__('servo_node')
 
 		# GPIO setup
 		self.h = lgpio.gpiochip_open(4)
-		for pin in [PWM_CHANNEL, EN_CHANNEL, RELAY_CHANNEL]:
+		for pin in [PWM_CHANNEL, EN_CHANNEL, RELAY_CHANNEL, A_CHANNEL]:
 			lgpio.gpio_claim_output(self.h, pin)
 
 		# Initial motor state
 		lgpio.gpio_write(self.h, EN_CHANNEL, 0)
 		lgpio.gpio_write(self.h, RELAY_CHANNEL, 1)
-
+		lgpio.gpio_write(self.h, A_CHANNEL, 1)
 		# PWM setup
 		self.pwm_channel = PWM_CHANNEL
 		self.freq = PWM_FREQ
@@ -41,7 +41,7 @@ class ServoNode(Node):
 	def destroy_node(self):
 		try:
 			lgpio.tx_pwm(self.h, self.pwm_channel, self.freq, 0)
-			for pin in [EN_CHANNEL, RELAY_CHANNEL, PWM_CHANNEL]:
+			for pin in [EN_CHANNEL, RELAY_CHANNEL, PWM_CHANNEL, A_CHANNEL]:
 				lgpio.gpio_write(self.h, pin, 0)
 				lgpio.gpio_free(self.h, pin)
 			lgpio.gpiochip_close(self.h)

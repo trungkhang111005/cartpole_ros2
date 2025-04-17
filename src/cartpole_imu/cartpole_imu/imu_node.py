@@ -43,11 +43,26 @@ class IMUNode(Node):
 		msg.angle_deg = float(self.angle)
 		msg.angular_velocity = float(self.angle_vel)
 		self.publisher_.publish(msg)
+	def destroy_node(self):
+		self.sleep_mpu()  # Add this
+		super().destroy_node()
+
+	def sleep_mpu(self):
+		try:
+			from smbus2 import SMBus
+			with SMBus(4) as bus:
+				bus.write_byte_data(0x68, 0x6B, 0x40)
+			self.get_logger().info("MPU6050 set to sleep mode.")
+		except Exception as e:
+			self.get_logger().warn(f"Failed to sleep MPU6050: {e}")
+
 def main():
 	rclpy.init()
 	node = IMUNode()
-	rclpy.spin(node)
-	node.destroy_node()
-	rclpy.shutdown()
+	try:
+		rclpy.spin(node)
+	finally:
+		node.destroy_node()
+		rclpy.shutdown()
 if __name__ == '__main__':
 	main()
