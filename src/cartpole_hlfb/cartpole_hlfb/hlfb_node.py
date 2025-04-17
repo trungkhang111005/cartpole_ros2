@@ -71,15 +71,12 @@ class HLFBNode(Node):
 		self.hlfb.close()
 		super().destroy_node()
 
-def main(): 
+def main():
 	rclpy.init()
 	node = HLFBNode()
 	try:
 		rclpy.spin(node)
-	except KeyboardInterrupt:
-		pass
-	node.destroy_node()
-	rclpy.shutdown()
-
-if __name__ == '__main__':
-	main()
+	finally:
+		node.destroy_node()
+		if rclpy.ok():
+			rclpy.shutdown()

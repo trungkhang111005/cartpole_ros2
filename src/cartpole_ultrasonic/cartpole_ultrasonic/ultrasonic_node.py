@@ -41,8 +41,12 @@ class UltrasonicNode(Node):
 			msg.x_cart_m = dist
 			self.publisher_.publish(msg)
 def main():
-        rclpy.init()
-        node = UltrasonicNode()
-        rclpy.spin(node)
-        node.destroy_node()
-        rclpy.shutdown()
+	rclpy.init()
+	node = UltrasonicNode()
+	try:
+		rclpy.spin(node)
+	finally:
+		node.destroy_node()
+		if rclpy.ok():
+			rclpy.shutdown()
+

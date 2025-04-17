@@ -4,7 +4,7 @@ from cartpole_interfaces.msg import ImuReading, PositionReading, VelocityReading
 from rclpy.node import Node
 
 # === LQR (Inner Loop) Gains ===
-K_THETA = 4
+K_THETA = 4.5
 K_THETA_DOT = 1.2
 
 # === PD (Outer Loop) Gains ===
@@ -30,6 +30,8 @@ class ControllerNode(Node):
 				# Run at ~200 Hz
 		self.control_timer = self.create_timer(0.005, self.publish_torque)
 		self.prev_x_cart = 0.0
+		self.prev_torque = 0.0
+
 	def imu_callback(self, msg):
 		self.theta = math.radians(msg.angle_deg)
 		self.theta_dot = math.radians(msg.angular_velocity)
@@ -46,7 +48,6 @@ class ControllerNode(Node):
 		self.x_cart_dot *= vel_sign  # Impose sign onto velocity
 
 		self.prev_x_cart = self.x_cart  # Update previous position
-
 	def clamp(self, val, low, high):
 		return max(low, min(high, val))
 
@@ -67,7 +68,6 @@ class ControllerNode(Node):
 			theta_error = self.theta - theta_ref
 			torque = - (K_THETA * theta_error + K_THETA_DOT * self.theta_dot)
 
-<<<<<<< HEAD
 			# Optional: Torque rate limiting
 			delta = torque - self.prev_torque
 			if abs(delta) > TORQUE_RATE:
@@ -75,8 +75,6 @@ class ControllerNode(Node):
 
 		self.prev_torque = torque
 
-=======
->>>>>>> master
 		# === Publish ===
 		msg = TorqueCommand()
 		msg.torque_nm = float(torque)
@@ -91,6 +89,10 @@ class ControllerNode(Node):
 def main():
 	rclpy.init()
 	node = ControllerNode()
-	rclpy.spin(node)
-	node.destroy_node()
-	rclpy.shutdown()
+	try:
+		rclpy.spin(node)
+	finally:
+		node.destroy_node()
+		if rclpy.ok():
+			rclpy.shutdown()
+
