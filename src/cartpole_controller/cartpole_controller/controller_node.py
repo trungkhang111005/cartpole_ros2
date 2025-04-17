@@ -4,14 +4,15 @@ from cartpole_interfaces.msg import ImuReading, PositionReading, VelocityReading
 from rclpy.node import Node
 
 # === LQR (Inner Loop) Gains ===
-K_THETA = 20.1171
-K_THETA_DOT = 2.7638
+K_THETA = 2
+K_THETA_DOT = 0.27
 
 # === PD (Outer Loop) Gains ===
-K_X = 6	       # P gain for cart position
-K_X_DOT = 0.540413040993283    # D gain for cart velocity
+K_X = 3.8	       # P gain for cart position
+K_X_DOT = 0.108    # D gain for cart velocity
 
 THRESHOLD_THETA = 20.0  # degrees (failsafe)
+THETA_REF_MAX = math.radians(15.0)  # limit the reference to ±15 deg
 
 class ControllerNode(Node):
 	def __init__(self):
@@ -40,23 +41,22 @@ class ControllerNode(Node):
 	def vel_callback(self, msg):
 		self.x_cart_dot = msg.cart_x_dot_m
 		self.publish_torque()
+	def clamp(self, val, low, high):
+		return max(low, min(high, val))
 
 	def publish_torque(self):
-		# === Failsafe: large pole angle ===
+		# === Failsafe ===
 		if abs(math.degrees(self.theta)) > THRESHOLD_THETA:
-
-			torque_pd =  (K_X * self.x_cart + K_X_DOT * self.x_cart_dot)
-			torque = torque_pd
-			torque_lqr = 0.0
+			torque = 0.0
+			theta_ref = 0.0
 		else:
-			# Inner loop (LQR): stabilize pole
-			torque_lqr = - (K_THETA * self.theta + K_THETA_DOT * self.theta_dot)
+			# === Outer Loop (PD): Compute desired pole angle ===
+			theta_ref = -K_X * self.x_cart - K_X_DOT * self.x_cart_dot
+			theta_ref = self.clamp(theta_ref, -THETA_REF_MAX, THETA_REF_MAX)
 
-			# Outer loop (PD): center cart
-			torque_pd = - (K_X * self.x_cart + K_X_DOT * self.x_cart_dot)
-
-			# Combine
-			torque = torque_lqr + torque_pd
+			# === Inner Loop (LQR): Track theta_ref ===
+			theta_error = self.theta - theta_ref
+			torque = - (K_THETA * theta_error + K_THETA_DOT * self.theta_dot)
 
 			# Optional: Torque rate limiting
 			delta = torque - self.prev_torque
@@ -65,18 +65,17 @@ class ControllerNode(Node):
 
 		self.prev_torque = torque
 
-		# Publish torque
+		# === Publish ===
 		msg = TorqueCommand()
 		msg.torque_nm = float(torque)
 		self.pub_cmd.publish(msg)
 
-		# Debug log
+	# === Logging ===
 		self.get_logger().info(
 			f"[Control] θ: {math.degrees(self.theta):.2f}°, θ̇: {math.degrees(self.theta_dot):.2f}°/s, "
-			f"x_cart: {self.x_cart:.4f} m, v_cart: {self.x_cart_dot:.4f} m/s, torque: {torque:.3f} Nm"
-			f"lqr_torque: {torque_lqr:.4f} Nm, pd_torque: {torque_pd:.4f} Nm"
+			f"x_cart: {self.x_cart:.4f} m, v_cart: {self.x_cart_dot:.4f} m/s, "
+			f"θ_ref: {math.degrees(theta_ref):.2f}°, τ: {torque:.3f} Nm"
 		)
-
 def main():
 	rclpy.init()
 	node = ControllerNode()
