@@ -27,7 +27,6 @@ class ControllerNode(Node):
 		self.theta_dot = 0.0
 		self.x_cart = 0.0
 		self.x_cart_dot = 0.0
-		self.prev_torque = 0.0
 				# Run at ~200 Hz
 		self.control_timer = self.create_timer(0.005, self.publish_torque)
 
@@ -59,13 +58,6 @@ class ControllerNode(Node):
 			# === Inner Loop (LQR): Track theta_ref ===
 			theta_error = self.theta - theta_ref
 			torque = - (K_THETA * theta_error + K_THETA_DOT * self.theta_dot)
-
-			# Optional: Torque rate limiting
-			delta = torque - self.prev_torque
-			if abs(delta) > 0.05:
-				torque = self.prev_torque + 0.05 * math.copysign(1, delta)
-
-		self.prev_torque = torque
 
 		# === Publish ===
 		msg = TorqueCommand()
