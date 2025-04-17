@@ -17,8 +17,8 @@ THETA_REF_MAX = math.radians(5.0)  # limit the reference to ±15 deg
 class ControllerNode(Node):
 	def __init__(self):
 		super().__init__('controller_node')
-		self.sub_imu = self.create_subscription(ImuReading, 'imu_data', self.imu_callback, 10)
-		self.sub_pos = self.create_subscription(PositionReading, 'position_data', self.pos_callback, 10)
+		self.sub_imu = self.create_subscription(ImuReading, 'imu_data', self.imu_callback, 50)
+		self.sub_pos = self.create_subscription(PositionReading, 'position_data', self.pos_callback, 20)
 		self.sub_vel = self.create_subscription(VelocityReading, 'cart_x_dot_m', self.vel_callback, 10)
 		self.pub_cmd = self.create_publisher(TorqueCommand, 'torque_cmd', 10)
 

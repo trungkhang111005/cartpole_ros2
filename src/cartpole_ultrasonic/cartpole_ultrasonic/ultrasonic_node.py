@@ -7,7 +7,7 @@ import lgpio
 class UltrasonicNode(Node):
 	def __init__(self):
 		super().__init__('ultrasonic_node')
-		self.publisher_ = self.create_publisher(PositionReading, 'position_data', 10)
+		self.publisher_ = self.create_publisher(PositionReading, 'position_data', 20)
 		self.timer = self.create_timer(0.02, self.publish_position)
 		self.h = lgpio.gpiochip_open(4)
 		self.trig, self.echo = 15, 14

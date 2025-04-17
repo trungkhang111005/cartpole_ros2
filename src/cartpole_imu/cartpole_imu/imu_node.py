@@ -9,7 +9,7 @@ import time
 class IMUNode(Node):
 	def __init__(self):
 		super().__init__('imu_node')
-		self.publisher_ = self.create_publisher(ImuReading, 'imu_data', 10)
+		self.publisher_ = self.create_publisher(ImuReading, 'imu_data', 50)
 		self.bus = SMBus(1)
 		self.timer = self.create_timer(0.005, self.publish_imu_data)
 		# Init IMU
