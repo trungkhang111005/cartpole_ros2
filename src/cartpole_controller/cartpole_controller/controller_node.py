@@ -4,15 +4,15 @@ from cartpole_interfaces.msg import ImuReading, PositionReading, VelocityReading
 from rclpy.node import Node
 
 # === LQR (Inner Loop) Gains ===
-K_THETA = 2
-K_THETA_DOT = 0.27
+K_THETA = 4
+K_THETA_DOT = 1
 
 # === PD (Outer Loop) Gains ===
-K_X = 3.8	       # P gain for cart position
-K_X_DOT = 0.108    # D gain for cart velocity
+K_X = 0.228	       # P gain for cart position
+K_X_DOT = 0.0065    # D gain for cart velocity
 
-THRESHOLD_THETA = 20.0  # degrees (failsafe)
-THETA_REF_MAX = math.radians(15.0)  # limit the reference to ±15 deg
+THRESHOLD_THETA = 12.5  # degrees (failsafe)
+THETA_REF_MAX = math.radians(5.0)  # limit the reference to ±15 deg
 
 class ControllerNode(Node):
 	def __init__(self):
@@ -51,7 +51,10 @@ class ControllerNode(Node):
 			theta_ref = 0.0
 		else:
 			# === Outer Loop (PD): Compute desired pole angle ===
-			theta_ref = -K_X * self.x_cart - K_X_DOT * self.x_cart_dot
+			if abs(self.x_cart) < 0.02:
+				theta_ref = 0.0
+			else:
+				theta_ref = -K_X * self.x_cart - K_X_DOT * self.x_cart_dot
 			theta_ref = self.clamp(theta_ref, -THETA_REF_MAX, THETA_REF_MAX)
 
 			# === Inner Loop (LQR): Track theta_ref ===
