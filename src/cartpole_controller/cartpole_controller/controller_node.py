@@ -10,7 +10,7 @@ K_THETA_DOT = 1.2
 # === PD (Outer Loop) Gains ===
 K_X = 0.228	       # P gain for cart position
 K_X_DOT = 0.0065    # D gain for cart velocity
-
+TORQUE_RATE = 0.03
 THRESHOLD_THETA = 12.5  # degrees (failsafe)
 THETA_REF_MAX = math.radians(5.0)  # limit the reference to ±15 deg
 
@@ -29,7 +29,7 @@ class ControllerNode(Node):
 		self.x_cart_dot = 0.0
 				# Run at ~200 Hz
 		self.control_timer = self.create_timer(0.005, self.publish_torque)
-
+		self.prev_x_cart = 0.0
 	def imu_callback(self, msg):
 		self.theta = math.radians(msg.angle_deg)
 		self.theta_dot = math.radians(msg.angular_velocity)
@@ -39,6 +39,14 @@ class ControllerNode(Node):
 
 	def vel_callback(self, msg):
 		self.x_cart_dot = msg.cart_x_dot_m
+
+		# Estimate velocity direction using position delta
+		delta_pos = self.x_cart - self.prev_x_cart
+		vel_sign = math.copysign(1.0, delta_pos) if abs(delta_pos) > 0.0005 else 0.0  # Threshold to avoid noise
+		self.x_cart_dot *= vel_sign  # Impose sign onto velocity
+
+		self.prev_x_cart = self.x_cart  # Update previous position
+
 	def clamp(self, val, low, high):
 		return max(low, min(high, val))
 
@@ -59,6 +67,16 @@ class ControllerNode(Node):
 			theta_error = self.theta - theta_ref
 			torque = - (K_THETA * theta_error + K_THETA_DOT * self.theta_dot)
 
+<<<<<<< HEAD
+			# Optional: Torque rate limiting
+			delta = torque - self.prev_torque
+			if abs(delta) > TORQUE_RATE:
+				torque = self.prev_torque + TORQUE_RATE * math.copysign(1, delta)
+
+		self.prev_torque = torque
+
+=======
+>>>>>>> master
 		# === Publish ===
 		msg = TorqueCommand()
 		msg.torque_nm = float(torque)
