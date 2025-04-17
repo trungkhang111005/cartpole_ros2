@@ -5,7 +5,7 @@ from rclpy.node import Node
 
 # === LQR (Inner Loop) Gains ===
 K_THETA = 4
-K_THETA_DOT = 1
+K_THETA_DOT = 1.2
 
 # === PD (Outer Loop) Gains ===
 K_X = 0.228	       # P gain for cart position
