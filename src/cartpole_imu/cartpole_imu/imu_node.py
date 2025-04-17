@@ -49,9 +49,7 @@ class IMUNode(Node):
 
 	def sleep_mpu(self):
 		try:
-			from smbus2 import SMBus
-			with SMBus(4) as bus:
-				bus.write_byte_data(0x68, 0x6B, 0x40)
+				bus.write_byte_data(self.addr, 0x6B, 0x40)
 			self.get_logger().info("MPU6050 set to sleep mode.")
 		except Exception as e:
 			self.get_logger().warn(f"Failed to sleep MPU6050: {e}")

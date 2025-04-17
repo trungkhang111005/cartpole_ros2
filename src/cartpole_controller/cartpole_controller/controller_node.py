@@ -27,7 +27,6 @@ class ControllerNode(Node):
 		self.theta_dot = 0.0
 		self.x_cart = 0.0
 		self.x_cart_dot = 0.0
-		self.prev_torque = 0.0
 				# Run at ~200 Hz
 		self.control_timer = self.create_timer(0.005, self.publish_torque)
 		self.prev_x_cart = 0.0
@@ -68,6 +67,7 @@ class ControllerNode(Node):
 			theta_error = self.theta - theta_ref
 			torque = - (K_THETA * theta_error + K_THETA_DOT * self.theta_dot)
 
+<<<<<<< HEAD
 			# Optional: Torque rate limiting
 			delta = torque - self.prev_torque
 			if abs(delta) > TORQUE_RATE:
@@ -75,6 +75,8 @@ class ControllerNode(Node):
 
 		self.prev_torque = torque
 
+=======
+>>>>>>> master
 		# === Publish ===
 		msg = TorqueCommand()
 		msg.torque_nm = float(torque)
