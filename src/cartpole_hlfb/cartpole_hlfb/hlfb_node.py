@@ -44,7 +44,7 @@ class HLFBNode(Node):
 		self.publisher_ = self.create_publisher(VelocityReading, 'cart_x_dot_m', 10)
 		self.timer = self.create_timer(0.023, self.publish_velocity)  # 50 Hz
 		self.hlfb = HLFBReader(chip=4, pin=19)
-		self.max_velocity = 0.071 * 1500 / 60  # TRACK_LEN * MAX_RPS
+		self.max_velocity = 0.071 * 2000 / 60  # TRACK_LEN * MAX_RPS
 		self.filtered_velocity = 0.0
 		self.alpha = 0.95
 	def publish_velocity(self):
@@ -54,12 +54,18 @@ class HLFBNode(Node):
 				duty = 5.0
 			elif duty > 95.0:
 				duty = 95.0
-			scaled_duty = (duty - 5.0) / (95.0 - 5.0)  # map 5–95 to 0–1
+
+			scaled_duty = (duty - 5.0) / (95.0 - 5.0)
 			raw_velocity = scaled_duty * self.max_velocity
 
 			self.filtered_velocity = (
 				self.alpha * raw_velocity + (1 - self.alpha) * self.filtered_velocity
 			)
+
+			# Add deadband here
+			if self.filtered_velocity < 0.0035:
+				self.filtered_velocity = 0.0
+
 			msg = VelocityReading()
 			msg.cart_x_dot_m = float(self.filtered_velocity)
 			self.publisher_.publish(msg)

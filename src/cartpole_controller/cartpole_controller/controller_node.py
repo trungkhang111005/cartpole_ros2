@@ -13,7 +13,7 @@ K_X_DOT = 0.0065    # D gain for cart velocity
 TORQUE_RATE = 0.025
 THRESHOLD_THETA = 12.5  # degrees (failsafe)
 THETA_REF_MAX = math.radians(5.0)  # limit the reference to ±15 deg
-POS_ALPHA = 0.8
+POS_ALPHA = 0.92
 POS_DT = 0.005
 class ControllerNode(Node):
 	def __init__(self):
