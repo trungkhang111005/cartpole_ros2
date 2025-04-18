@@ -4,13 +4,13 @@ from cartpole_interfaces.msg import ImuReading, PositionReading, VelocityReading
 from rclpy.node import Node
 
 # === LQR (Inner Loop) Gains ===
-K_THETA = 4.5
-K_THETA_DOT = 1.2
+K_THETA = 4
+K_THETA_DOT = 1.5
 
 # === PD (Outer Loop) Gains ===
 K_X = 0.228	       # P gain for cart position
 K_X_DOT = 0.0065    # D gain for cart velocity
-TORQUE_RATE = 0.03
+TORQUE_RATE = 0.025
 THRESHOLD_THETA = 12.5  # degrees (failsafe)
 THETA_REF_MAX = math.radians(5.0)  # limit the reference to ±15 deg
 
@@ -31,7 +31,7 @@ class ControllerNode(Node):
 		self.control_timer = self.create_timer(0.005, self.publish_torque)
 		self.prev_x_cart = 0.0
 		self.prev_torque = 0.0
-
+		pos_alpha = 0.8
 	def imu_callback(self, msg):
 		self.theta = math.radians(msg.angle_deg)
 		self.theta_dot = math.radians(msg.angular_velocity)
@@ -91,6 +91,8 @@ def main():
 	node = ControllerNode()
 	try:
 		rclpy.spin(node)
+	except KeyboardInterrupt:
+		pass
 	finally:
 		node.destroy_node()
 		if rclpy.ok():
