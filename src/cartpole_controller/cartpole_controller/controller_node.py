@@ -13,7 +13,8 @@ K_X_DOT = 0.0065    # D gain for cart velocity
 TORQUE_RATE = 0.025
 THRESHOLD_THETA = 12.5  # degrees (failsafe)
 THETA_REF_MAX = math.radians(5.0)  # limit the reference to ±15 deg
-
+POS_ALPHA = 0.8
+POS_DT = 0.005
 class ControllerNode(Node):
 	def __init__(self):
 		super().__init__('controller_node')
@@ -31,7 +32,8 @@ class ControllerNode(Node):
 		self.control_timer = self.create_timer(0.005, self.publish_torque)
 		self.prev_x_cart = 0.0
 		self.prev_torque = 0.0
-		pos_alpha = 0.8
+		self.x_cart_filt = 0.0
+		self.x_cart_dot_signed = 0.0
 	def imu_callback(self, msg):
 		self.theta = math.radians(msg.angle_deg)
 		self.theta_dot = math.radians(msg.angular_velocity)
@@ -42,16 +44,24 @@ class ControllerNode(Node):
 	def vel_callback(self, msg):
 		self.x_cart_dot = msg.cart_x_dot_m
 
-		# Estimate velocity direction using position delta
+		# Estimate velocity sign
 		delta_pos = self.x_cart - self.prev_x_cart
-		vel_sign = math.copysign(1.0, delta_pos) if abs(delta_pos) > 0.0005 else 0.0  # Threshold to avoid noise
-		self.x_cart_dot *= vel_sign  # Impose sign onto velocity
+		sign_pos = math.copysign(1.0, delta_pos) if abs(delta_pos) > 0.01 else 0.0
+		sign_torque = math.copysign(1.0, self.prev_torque) if abs(self.prev_torque) > 0.01 else 0.0
 
-		self.prev_x_cart = self.x_cart  # Update previous position
+		# Prefer ultrasonic sign if reliable
+		self.vel_sign = sign_pos if sign_pos != 0.0 else sign_torque
+
+		self.x_cart_dot_signed = self.x_cart_dot * self.vel_sign
+		self.prev_x_cart = self.x_cart
 	def clamp(self, val, low, high):
 		return max(low, min(high, val))
 
 	def publish_torque(self):
+			# Complementary filter
+		dt = 0.005  # match control loop rate
+		x_cart_from_vel = self.x_cart_filt + self.x_cart_dot_signed * POS_DT
+		self.x_cart_filt = POS_ALPHA * x_cart_from_vel + (1 - POS_ALPHA) * self.x_cart
 		# === Failsafe ===
 		if abs(math.degrees(self.theta)) > THRESHOLD_THETA:
 			torque = 0.0
@@ -61,7 +71,7 @@ class ControllerNode(Node):
 			if abs(self.x_cart) < 0.02:
 				theta_ref = 0.0
 			else:
-				theta_ref = -K_X * self.x_cart - K_X_DOT * self.x_cart_dot
+				theta_ref = -K_X * self.x_cart_filt - K_X_DOT * self.x_cart_dot_signed
 			theta_ref = self.clamp(theta_ref, -THETA_REF_MAX, THETA_REF_MAX)
 
 			# === Inner Loop (LQR): Track theta_ref ===
@@ -83,7 +93,7 @@ class ControllerNode(Node):
 	# === Logging ===
 		self.get_logger().info(
 			f"[Control] θ: {math.degrees(self.theta):.2f}°, θ̇: {math.degrees(self.theta_dot):.2f}°/s, "
-			f"x_cart: {self.x_cart:.4f} m, v_cart: {self.x_cart_dot:.4f} m/s, "
+			f"x_cart: {self.x_cart_filt:.4f} m, v_cart: {self.x_cart_dot_signed:.4f} m/s, "
 			f"θ_ref: {math.degrees(theta_ref):.2f}°, τ: {torque:.3f} Nm"
 		)
 def main():
