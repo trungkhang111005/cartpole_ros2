@@ -11,7 +11,7 @@ class IMUNode(Node):
 		super().__init__('imu_node')
 		self.publisher_ = self.create_publisher(ImuReading, 'imu_data', 50)
 		self.bus = SMBus(1)
-		self.timer = self.create_timer(0.005, self.publish_imu_data)
+		self.timer = self.create_timer(0.003, self.publish_imu_data)
 		# Init IMU
 		self.addr = 0x68
 		for attempt in range(3):
