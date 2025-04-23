@@ -4,14 +4,14 @@ from cartpole_interfaces.msg import ImuReading, PositionReading, VelocityReading
 from rclpy.node import Node
 
 # === LQR (Inner Loop) Gains ===
-K_THETA = 4
-K_THETA_DOT = 1.2
+K_THETA = 4.0
+K_THETA_DOT = 2.0
 
 # === PD (Outer Loop) Gains ===
 K_X = 0.228	       # P gain for cart position
 K_X_DOT = 0.008    # D gain for cart velocity
-TORQUE_RATE = 0.025
-THRESHOLD_THETA = 12.5  # degrees (failsafe)
+TORQUE_RATE = 0.05
+THRESHOLD_THETA = 10.0  # degrees (failsafe)
 THETA_REF_MAX = math.radians(5.0)  # limit the reference to ±15 deg
 POS_ALPHA = 0.92      #Complimentary filter for position
 POS_DT = 0.005        #sample rate of position from ultrasonic
@@ -29,7 +29,7 @@ class ControllerNode(Node):
 		self.x_cart = 0.0
 		self.x_cart_dot = 0.0
 				# Run at ~200 Hz
-		self.control_timer = self.create_timer(0.005, self.publish_torque)
+		self.control_timer = self.create_timer(0.01, self.publish_torque)
 		self.prev_x_cart = 0.0
 		self.prev_torque = 0.0
 		self.x_cart_filt = 0.0
