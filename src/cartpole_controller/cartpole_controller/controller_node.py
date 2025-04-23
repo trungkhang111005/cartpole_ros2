@@ -9,12 +9,12 @@ K_THETA_DOT = 1.2
 
 # === PD (Outer Loop) Gains ===
 K_X = 0.228	       # P gain for cart position
-K_X_DOT = 0.0065    # D gain for cart velocity
+K_X_DOT = 0.008    # D gain for cart velocity
 TORQUE_RATE = 0.025
 THRESHOLD_THETA = 12.5  # degrees (failsafe)
 THETA_REF_MAX = math.radians(5.0)  # limit the reference to ±15 deg
-POS_ALPHA = 0.92
-POS_DT = 0.005
+POS_ALPHA = 0.92      #Complimentary filter for position
+POS_DT = 0.005        #sample rate of position from ultrasonic
 class ControllerNode(Node):
 	def __init__(self):
 		super().__init__('controller_node')
@@ -59,7 +59,6 @@ class ControllerNode(Node):
 
 	def publish_torque(self):
 			# Complementary filter
-		dt = 0.005  # match control loop rate
 		x_cart_from_vel = self.x_cart_filt + self.x_cart_dot_signed * POS_DT
 		self.x_cart_filt = POS_ALPHA * x_cart_from_vel + (1 - POS_ALPHA) * self.x_cart
 		# === Failsafe ===
