@@ -11,10 +11,20 @@ class IMUNode(Node):
 		super().__init__('imu_node')
 		self.publisher_ = self.create_publisher(ImuReading, 'imu_data', 50)
 		self.bus = SMBus(1)
-		self.timer = self.create_timer(0.005, self.publish_imu_data)
+		self.timer = self.create_timer(0.003, self.publish_imu_data)
 		# Init IMU
 		self.addr = 0x68
-		self.bus.write_byte_data(self.addr, 0x6B, 0)
+		for attempt in range(3):
+			try:
+				self.bus.write_byte_data(self.addr, 0x6B, 0)
+				break
+			except OSError:
+				time.sleep(0.1)
+		else:
+			self.get_logger().error("MPU6050 not responding. Exiting.")
+			rclpy.shutdown()
+			return
+
 		self.prev_time = time.perf_counter()
 		self.angle = 0.0
 		self.angle_vel = 0.0
@@ -43,11 +53,25 @@ class IMUNode(Node):
 		msg.angle_deg = float(self.angle)
 		msg.angular_velocity = float(self.angle_vel)
 		self.publisher_.publish(msg)
+	def destroy_node(self):
+		self.sleep_mpu()  # Add this
+		super().destroy_node()
+
+	def sleep_mpu(self):
+		try:
+			self.bus.write_byte_data(self.addr, 0x6B, 0x40)
+			self.get_logger().info("MPU6050 set to sleep mode.")
+		except Exception as e:
+			self.get_logger().warn(f"Failed to sleep MPU6050: {e}")
+
 def main():
 	rclpy.init()
 	node = IMUNode()
-	rclpy.spin(node)
-	node.destroy_node()
-	rclpy.shutdown()
-if __name__ == '__main__':
-	main()
+	try:
+		rclpy.spin(node)
+	except KeyboardInterrupt:
+		pass
+	finally:
+		node.destroy_node()
+		if rclpy.ok():
+			rclpy.shutdown()
